@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}
+    <title>Title</title>
+{% endblock %}
+{% block content %}
+
+<body>
+                <h1> Do you really want to delete this record?</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <button>YES</button>
+                    <a href="{% url 'show_url' %}">
+                        <button type="button">NO</button>
+                    </a>
+                </form>
+</body>
+{% endblock %}

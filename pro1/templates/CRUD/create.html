@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>ADD order</title>
+{% endblock %}
+{% block content %}
+        <div class="border border-5 col-4 m-auto mt-5 p-2" >
+            <h4 class="text-center text-primary mb-3">Shopping</h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Purchase" class="btn btn-primary">
+                <input type="reset" value="cancel" class="btn btn-warning col-3 float-end">
+            </form>
+        </div>
+{% endblock %}
